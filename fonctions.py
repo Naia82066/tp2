@@ -43,3 +43,9 @@ class Exp(Expression):
 
     def __str__(self):
         return f"exp({self.expr})"
+    
+    def deriver(self):
+        return Multiplication(self, self.expr.deriver())
+
+    def __str__(self):
+        return f"exp({self.expr})"
